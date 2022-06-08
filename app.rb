@@ -81,3 +81,6 @@ end
 
 # find: access each element from an array, and return the first value that matches some condition.
 # filter-select: access each element from an array, and return a new array of all values that matches some criteria/conditions.
+# Times-prints an item a number of times
+5.times do puts "Hey Enid"
+end    
