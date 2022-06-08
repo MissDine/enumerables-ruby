@@ -31,4 +31,24 @@ puts title
 cheaper_books = books.select do |book|
     book[:price] < 700
 end    
-puts cheaper_books 
+puts cheaper_books
+#.find to find the first element that matches condition
+author = books.find do |book|
+    book[:author] == "Ken Walibora"
+end     
+puts author
+# Sum-helps u find the sum total of something
+total_price = books.sum do |book|
+    book[:price]
+end
+puts total_price 
+# max-finds the highest value
+max_price = books.max do |book|
+    book[:price]
+end
+puts max_price    
+# min-finds the lowest value 
+min_price = books.min do |book|
+    book[:price]
+end
+puts min_price  
