@@ -1,6 +1,5 @@
 require "pry"
-books = [
-    {title: "The river and the source",
+books = {title: "The river and the source",
         author: "Magret Ogolla",
         price: 800
         },
@@ -14,7 +13,6 @@ books = [
        author: "Dine Tichi",
        price: 1000
    }
-]
 #Each
 # loops through an array
 books.each do |book|
@@ -52,3 +50,21 @@ min_price = books.min do |book|
     book[:price]
 end
 puts min_price  
+# each
+arr = books.each {|book| puts book} 
+# to get each key in an array
+books.each do |book|
+    puts book.keys
+end 
+# to get each value in an array
+books.each do |book|
+    puts book.values
+end   
+
+# 
+author = books.select do |k,v|
+    v == "Margret Ogola"
+end
+puts author  
+puts books.include?(:price) 
+puts books.index ["Miss Dine"] 
