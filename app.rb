@@ -68,3 +68,16 @@ end
 puts author  
 puts books.include?(:price) 
 puts books.index ["Miss Dine"] 
+
+# METHOD -SYNTAX
+# EACH- used to access each element in an array-returns the original
+# MAP-collect- used to access each element in an array-returns a new array by transforming (mapping) the values to some new value.
+upcased =  ["this", "is", "JavaScript"].map do |low|
+    puts low.upcase
+end   
+good_morning = [" Norbert"," Junior"," dad"," mom"].map do |greet|
+    puts "Goodmorning" + greet
+end    
+
+# find: access each element from an array, and return the first value that matches some condition.
+# filter-select: access each element from an array, and return a new array of all values that matches some criteria/conditions.
