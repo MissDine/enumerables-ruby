@@ -83,4 +83,29 @@ end
 # filter-select: access each element from an array, and return a new array of all values that matches some criteria/conditions.
 # Times-prints an item a number of times
 5.times do puts "Hey Enid"
-end    
+end  
+# block - {}, do end
+# ||-used in enumerables.
+# Accessing an index in rb -we use the with_index method
+["Enid", "Norbert", "mom"].map.with_index do |name,index|
+    if index.even?
+        puts name.upcase
+    else
+        puts name
+    end
+end
+
+
+# another enumerable method for map
+["Enid", "Norbert", "mom"].map{|name| puts name.upcase}
+# Another way
+puts ["Enid", "Norbert", "mom"].map(&:downcase)
+
+# Enumerating with hashes-for each
+book = { title: "The Hobbit", author: "J. R. R. Tolkien", published: 1937 }
+book.each { |key,value| 
+    puts "Key: #{key}"
+    puts "Value: #{value}"
+}
+
+
